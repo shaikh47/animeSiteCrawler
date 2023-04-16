@@ -1,0 +1,1 @@
+module.exports.homepageService = require('./homepage.service');
