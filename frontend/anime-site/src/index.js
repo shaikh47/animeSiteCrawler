@@ -2,15 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import App from "./App"
 
 import SearchPage from "./components/SearchComponent";
-import AnimeList from "./components/AnimeList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <SearchPage />
-    {/* <AnimeList /> */}
+    <App />
   </React.StrictMode>
 );
 
