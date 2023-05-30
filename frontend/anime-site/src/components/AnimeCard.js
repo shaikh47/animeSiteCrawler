@@ -6,7 +6,7 @@ const AnimeCard = ({ anime }) => {
   return (
     <Card
       hoverable
-      style={{ width: 300 }}
+      style={{ maxWidth: "250px" }}
       cover={<img alt={anime.rawImageAltText} src={anime.rawImage} />}
     >
       <Meta title={anime.rawTxt} />
