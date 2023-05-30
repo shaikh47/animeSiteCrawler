@@ -8,7 +8,6 @@ const SearchComponent = () => {
   const [searchSuccess, setSearchSuccess] = useState(false);
 
   const handleSearch = () => {
-
     var requestOptions = {
       method: "GET",
       redirect: "follow",
@@ -35,18 +34,26 @@ const SearchComponent = () => {
   };
 
   return (
-    <div>
-      <Input
-        placeholder="Search anime..."
-        value={searchText}
-        onChange={handleInputChange}
-        style={{ marginRight: "16px" }}
-      />
-      <Button type="primary" onClick={handleSearch}>
-        Search
-      </Button>
+    <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Input
+          placeholder="Search anime..."
+          value={searchText}
+          onChange={handleInputChange}
+          style={{ marginRight: "16px" }}
+        />
+        <Button type="primary" onClick={handleSearch}>
+          Search
+        </Button>
+      </div>
       {searchSuccess && <AnimeList animeData={animeList} />}
-    </div>
+    </>
   );
 };
 

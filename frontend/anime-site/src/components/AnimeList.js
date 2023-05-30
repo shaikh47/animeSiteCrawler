@@ -15,10 +15,16 @@ import AnimeCard from "./AnimeCard";
 const AnimeList = (props) => {
   const { animeData } = props;
   console.log("at anime list")
-//   console.log(animeData)
 
   return (
-    <div>
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "20px",
+      padding: "20px",
+      flexWrap: "wrap"
+    }}>
       {animeData.map((anime, index) => (
         <AnimeCard key={index} anime={anime} />
       ))}
